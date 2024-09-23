@@ -205,16 +205,16 @@
       <section id="history" class="hidden"></section>
       <!-- Open the modal using ID.showModal() method -->
       <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
-      <dialog id="my_modal_1" class="modal rounded-2xl w-3/5">
-        <div class="modal-box p-10 flex justify-center flex-col items-center space-y-3 ">
+      <dialog id="my_modal_1" class="modal rounded-2xl md:w-1/3">
+        <div class="modal-box p-8 flex justify-center flex-col items-center space-y-4 ">
           <h1 class="text-4xl font-bold">Congrates!</h1>
           <img class="h-10" src="assets/coin.png" alt="">
-          <p class="py-4">You Have Donated for Humankind</p>
-          <h3>Successfully</h3>
+          <p class="text-lg">You Have Donated for Humankind</p>
+          <h3 class="font-bold text-xl">Successfully</h3>
           <div class="modal-action">
             <form method="dialog">
               <!-- if there is a button in form, it will close the modal -->
-              <button class="btn">close confirmation</button>
+              <button class="btn px-5 py-3 bg-secondary rounded-xl font-semibold">close confirmation</button>
             </form>
           </div>
         </div>
