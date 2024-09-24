@@ -9,10 +9,10 @@ function calculateMoney(id1, id2, id3) {
   const donateAmount = parseFloat(getElement(id1).value);
   let initialAmount = parseFloat(getElement(id2).innerText);
   totalDonationAmount = donateAmount + initialAmount;
-  getElement(id2).innerText = totalDonationAmount;
+  getElement(id2).innerText = totalDonationAmount.toFixed(2);
   const initialBalance = getElement(id3).innerText;
   const currentBalance = initialBalance - donateAmount;
-  return (getElement(id3).innerText = currentBalance);
+  return (getElement(id3).innerText = currentBalance.toFixed(2));
 }
 
 function historyRow(id) {
@@ -21,10 +21,9 @@ function historyRow(id) {
   div.className = "border-2 rounded-2xl p-8 mb-6";
   let loc =
     getElement(id).previousElementSibling.previousElementSibling.innerText;
-  console.log(loc);
   let now = new Date();
   div.innerHTML = `
-  <h2 class = "font-bold text-xl">${donateAmount} Taka is ${loc}</h2>
+  <h2 class = "font-bold text-xl">${donateAmount} Taka is donated for ${loc}</h2>
   <p class = "font-light">
   Date : ${now}
   </p>
@@ -62,13 +61,17 @@ document.getElementById("donation-btn").addEventListener("click", function () {
 document
   .getElementById("donate-now-btn1")
   .addEventListener("click", function () {
-    const donateAmount = getElement('donate-amount1').value;
-    const accountBalance = getElement('initial-balance').innerText;
-    if(donateAmount > accountBalance || isNaN(donateAmount) || donateAmount < 0){
-      return alert('Invalid Donation Amount');
-    }
-    else{
-      getElement('my_modal_1').showModal();
+    const donateAmount = parseFloat(getElement("donate-amount1").value);
+    const accountBalance = parseFloat(getElement("initial-balance").innerText);
+    if (
+      typeof donateAmount !== "number" ||
+      donateAmount > accountBalance ||
+      isNaN(donateAmount) ||
+      donateAmount < 0
+    ) {
+      return alert("Invalid Donation Amount");
+    } else {
+      getElement("my_modal_1").showModal();
     }
     calculateMoney("donate-amount1", "total-donate-1", "initial-balance");
     historyRow("donate-amount1");
@@ -77,6 +80,17 @@ document
 document
   .getElementById("donate-now-btn2")
   .addEventListener("click", function () {
+    const donateAmount = parseFloat(getElement("donate-amount2").value);
+    const accountBalance = parseFloat(getElement("initial-balance").innerText);
+    if (
+      donateAmount > accountBalance ||
+      isNaN(donateAmount) ||
+      donateAmount < 0
+    ) {
+      return alert("Invalid Donation Amount");
+    } else {
+      getElement("my_modal_1").showModal();
+    }
     calculateMoney("donate-amount2", "total-donate-2", "initial-balance");
 
     historyRow("donate-amount2");
@@ -85,7 +99,25 @@ document
 document
   .getElementById("donate-now-btn3")
   .addEventListener("click", function () {
+    const donateAmount = parseFloat(getElement("donate-amount3").value);
+    const accountBalance = parseFloat(getElement("initial-balance").innerText);
+    if (
+      donateAmount > accountBalance ||
+      isNaN(donateAmount) ||
+      donateAmount < 0
+    ) {
+      return alert("Invalid Donation Amount");
+    } else {
+      getElement("my_modal_1").showModal();
+    }
     calculateMoney("donate-amount3", "total-donate-3", "initial-balance");
 
     historyRow("donate-amount3");
   });
+
+document.getElementById("blog-btn").addEventListener("click", function () {
+  return window.location.href = "../blog.html";
+});
+document.getElementById("home-btn").addEventListener("click", function () {
+  return window.location.href = "../index.html";
+});
