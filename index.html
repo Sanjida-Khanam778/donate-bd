@@ -33,18 +33,18 @@
     </script>
   </head>
   <body class="bg-secondary w-screen">
-    <header class="sticky top-0 bg-secondary">
+    <header class="sticky top-0 bg-secondary backdrop-blur-xl bg-opacity-85">
       <nav class="flex justify-between w-10/12 mx-auto py-6">
-        <button id="blog-btn" class="px-8 py-3 rounded-lg text-xl font-semibold bg-primary">
+        <button id="blog-btn" class="md:px-8 md:py-3 px-5 py-2 rounded-lg text-xl font-semibold bg-primary">
           <a href="blog.html">Blog</a>
         </button>
         <div class="flex items-center gap-4">
-          <img src="assets/logo.png" alt="" />
+          <img class="h-8 md:h-auto" src="assets/logo.png" alt="" />
           <span class="font-semibold text-xl hidden md:block"
             >Donate Bangladesh</span
           >
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-1 md:gap-3">
           <img src="assets/coin.png" alt="" class="h-6" />
           <span id="initial-balance" class="text-xl font-medium text-text"
             >5500</span
@@ -54,17 +54,17 @@
       </nav>
      
     </header>
-    <main class="bg-white p-10 mt-10 mb-10 lg:mb-36">
-      <section id="hero" class="flex justify-center gap-4 pt-10 pb-8 sticky top-[100px] bg-white">
+    <main class="bg-white p-10 md:mt-10 mb-10 lg:mb-36">
+      <section class="flex justify-center gap-4 pt-10 pb-8 sticky top-[92px] md:top-[100px] bg-white bg-opacity-55 backdrop-blur-xl mx-auto">
         <button
           id="donation-btn"
-          class="px-8 py-3 rounded-lg text-xl font-semibold bg-primary"
+          class="md:px-8 md:py-3 px-5 py-2 rounded-lg text-xl font-semibold bg-primary"
         >
           Donation
         </button>
         <button
           id="history-btn"
-          class="px-8 py-3 rounded-lg text-text text-xl font-semibold border border-border"
+          class="md:px-8 md:py-3 px-5 py-2 rounded-lg text-text text-xl font-semibold border border-border"
         >
           History
         </button>
@@ -89,7 +89,7 @@
             <h2 class="text-xl font-bold mb-4">
               Donate for Flood at Noakhali, Bangladesh
             </h2>
-            <p class="font-light text-text mb-8">
+            <p class="font-light text-text mb-8 text-justify">
               The recent floods in Noakhali have caused significant damage to
               homes infrastructure. Your donation will help provide essential
               supplies and to those affected by this disaster. Every
@@ -131,7 +131,7 @@
             <h2 class="text-xl font-bold mb-4">
               Donate for Flood Relief in Feni,Bangladesh
             </h2>
-            <p class="font-light text-text mb-8">
+            <p class="font-light text-text mb-8 text-justify">
               The recent floods in Feni have devastated local communities,
               leading to severe disruption and loss. Your generous donation will
               help provide immediate aid, including food, clean water, and
@@ -175,7 +175,7 @@
             <h2 class="text-xl font-bold mb-4">
               Aid for Injured in the Quota Movement
             </h2>
-            <p class="font-light text-text mb-8">
+            <p class="font-light text-text mb-8 text-justify">
               The recent Quota movement has resulted in numerous injuries and
               significant hardship for many individuals. Your support is crucial
               in providing medical assistance, rehabilitation, and necessary

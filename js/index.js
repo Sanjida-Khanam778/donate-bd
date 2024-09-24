@@ -61,8 +61,8 @@ document.getElementById("donation-btn").addEventListener("click", function () {
 document
   .getElementById("donate-now-btn1")
   .addEventListener("click", function () {
-    const donateAmount = parseFloat(getElement("donate-amount1").value);
-    const accountBalance = parseFloat(getElement("initial-balance").innerText);
+    const donateAmount = getElement("donate-amount1").value;
+    const accountBalance = getElement("initial-balance").innerText;
     if (
       typeof donateAmount !== "number" ||
       donateAmount > accountBalance ||
@@ -80,8 +80,9 @@ document
 document
   .getElementById("donate-now-btn2")
   .addEventListener("click", function () {
-    const donateAmount = parseFloat(getElement("donate-amount2").value);
-    const accountBalance = parseFloat(getElement("initial-balance").innerText);
+    const donateAmount = getElement("donate-amount2").value;
+    const accountBalance = getElement("initial-balance").innerText;
+    console.log(donateAmount);
     if (
       donateAmount > accountBalance ||
       isNaN(donateAmount) ||
@@ -99,8 +100,8 @@ document
 document
   .getElementById("donate-now-btn3")
   .addEventListener("click", function () {
-    const donateAmount = parseFloat(getElement("donate-amount3").value);
-    const accountBalance = parseFloat(getElement("initial-balance").innerText);
+    const donateAmount = getElement("donate-amount3").value;
+    const accountBalance = getElement("initial-balance").innerText;
     if (
       donateAmount > accountBalance ||
       isNaN(donateAmount) ||
@@ -114,10 +115,3 @@ document
 
     historyRow("donate-amount3");
   });
-
-// document.getElementById("blog-btn").addEventListener("click", function () {
-//   return window.location.href = "../blog.html";
-// });
-// document.getElementById("home-btn").addEventListener("click", function () {
-//   return window.location.href = "../index.html";
-// });
