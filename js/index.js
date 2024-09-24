@@ -115,9 +115,9 @@ document
     historyRow("donate-amount3");
   });
 
-document.getElementById("blog-btn").addEventListener("click", function () {
-  return window.location.href = "../blog.html";
-});
-document.getElementById("home-btn").addEventListener("click", function () {
-  return window.location.href = "../index.html";
-});
+// document.getElementById("blog-btn").addEventListener("click", function () {
+//   return window.location.href = "../blog.html";
+// });
+// document.getElementById("home-btn").addEventListener("click", function () {
+//   return window.location.href = "../index.html";
+// });
