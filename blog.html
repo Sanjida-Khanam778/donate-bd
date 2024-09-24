@@ -35,7 +35,7 @@
     </script>
   </head>
   <body>
-    <header class="sticky top-0 bg-secondary">
+    <header class="sticky top-0 bg-secondary backdrop-blur-lg bg-opacity-70 z-10">
       <nav class="flex justify-between w-10/12 mx-auto py-6 mb-10">
         <button
           id="home-btn"
@@ -59,7 +59,7 @@
       </nav>
       
     </header>
-    <main class="mx-auto w-3/4">
+    <main class="mx-auto w-3/4 pb-20">
       <!-- heading -->
       <div class="flex gap-3 mb-10">
         <h1 class="text-3xl font-bold">Important FAQ</h1>
@@ -67,32 +67,32 @@
       </div>
       <!-- FAQs -->
       <div class="join join-vertical w-full">
-        <div class="collapse collapse-arrow join-item border-base-300 border p-5 text-2xl">
+        <div class="collapse collapse-arrow join-item border-base-300 border p-5 text-xl lg:text-2xl">
           <input type="radio" name="my-accordion-4" checked="checked" />
           <div class="collapse-title font-medium">What is the Document Object Model (DOM)?</div>
           <div class="collapse-content">
-            <p>hello</p>
+            <p class="text-lg text-text">DOM is a model which is used for interacting the web page using JS. Here Document means any file like .html, .css etc. These files are represented as objects in JS and DOM is a tree model.</p>
           </div>
         </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border p-5 text-2xl">
+        <div class="collapse collapse-arrow join-item border-base-300 border p-5 text-xl lg:text-2xl">
           <input type="radio" name="my-accordion-4" />
           <div class="collapse-title font-medium">How do you select an element from the DOM?</div>
           <div class="collapse-content">
-            <p>hello</p>
+            <p class="text-lg text-text">We can select an element from the DOM by using some element selector. Multiple element selector is used for selecting multiple element at a time whereas single element selector are used for selecting only one element.</p>
           </div>
         </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border p-5 text-2xl">
+        <div class="collapse collapse-arrow join-item border-base-300 border p-5 text-xl lg:text-2xl">
           <input type="radio" name="my-accordion-4" />
           <div class="collapse-title font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
           <div class="collapse-content">
-            <p>hello</p>
+            <p class="text-lg text-text">Event delegation is a technique for handling event efficiently. Here more than one event is handled by using only one event listener. If we add event listener to parent element then the event is handled with all the child element. Furthermore, event is handled over a newly added child in event delegation. For these reason, event delegation is useful.</p>
           </div>
         </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border p-5 text-2xl">
+        <div class="collapse collapse-arrow join-item border-base-300 border p-5 text-xl lg:text-2xl">
           <input type="radio" name="my-accordion-4" />
           <div class="collapse-title font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
           <div class="collapse-content">
-            <p>hello</p>
+            <p class="text-lg text-text">For manipulating element's attributes and styles, we have to use some method. First we have to select the element and then apply the methods on it. For manipulating attributes, getAttribute(), serAttributes(), and removeAttributes are used. For applying style, classList() and .style is used.</p>
           </div>
         </div>
       </div>

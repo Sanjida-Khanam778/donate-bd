@@ -61,13 +61,14 @@ document.getElementById("donation-btn").addEventListener("click", function () {
 document
   .getElementById("donate-now-btn1")
   .addEventListener("click", function () {
-    const donateAmount = getElement("donate-amount1").value;
-    const accountBalance = getElement("initial-balance").innerText;
+    const donateAmount = Number(getElement("donate-amount1").value);
+    console.log(donateAmount)
+    const accountBalance = Number(getElement("initial-balance").innerText);
     if (
-      typeof donateAmount !== "number" ||
+      donateAmount === "" ||
       donateAmount > accountBalance ||
       isNaN(donateAmount) ||
-      donateAmount < 0
+      donateAmount <= 0
     ) {
       return alert("Invalid Donation Amount");
     } else {
@@ -80,13 +81,13 @@ document
 document
   .getElementById("donate-now-btn2")
   .addEventListener("click", function () {
-    const donateAmount = getElement("donate-amount2").value;
-    const accountBalance = getElement("initial-balance").innerText;
-    console.log(donateAmount);
+    const donateAmount = Number(getElement("donate-amount2").value);
+    const accountBalance = Number(getElement("initial-balance").innerText);
     if (
+      donateAmount === "" ||
       donateAmount > accountBalance ||
       isNaN(donateAmount) ||
-      donateAmount < 0
+      donateAmount <= 0
     ) {
       return alert("Invalid Donation Amount");
     } else {
@@ -100,12 +101,13 @@ document
 document
   .getElementById("donate-now-btn3")
   .addEventListener("click", function () {
-    const donateAmount = getElement("donate-amount3").value;
-    const accountBalance = getElement("initial-balance").innerText;
-    if (
+    const donateAmount = Number(getElement("donate-amount3").value);
+    const accountBalance = Number(getElement("initial-balance").innerText);
+    if ( 
+      donateAmount === "" ||
       donateAmount > accountBalance ||
       isNaN(donateAmount) ||
-      donateAmount < 0
+      donateAmount <= 0
     ) {
       return alert("Invalid Donation Amount");
     } else {
