@@ -63,7 +63,6 @@ document
   .getElementById("donate-now-btn1")
   .addEventListener("click", function () {
     const donateAmount = Number(getElement("donate-amount1").value);
-    console.log(donateAmount);
     const accountBalance = Number(getElement("initial-balance").innerText);
     if (
       donateAmount === "" ||
