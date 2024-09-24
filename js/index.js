@@ -29,7 +29,8 @@ function historyRow(id) {
   </p>
   `;
   const history = getElement("history");
-  return history.insertBefore(div, history.firstChild);
+  history.insertBefore(div, history.firstChild);
+  return (getElement(id).value = "");
 }
 
 // toggle features
@@ -62,7 +63,7 @@ document
   .getElementById("donate-now-btn1")
   .addEventListener("click", function () {
     const donateAmount = Number(getElement("donate-amount1").value);
-    console.log(donateAmount)
+    console.log(donateAmount);
     const accountBalance = Number(getElement("initial-balance").innerText);
     if (
       donateAmount === "" ||
@@ -70,7 +71,8 @@ document
       isNaN(donateAmount) ||
       donateAmount <= 0
     ) {
-      return alert("Invalid Donation Amount");
+      alert("Invalid Donation Amount");
+      return getElement("donate-amount1").value = "";
     } else {
       getElement("my_modal_1").showModal();
     }
@@ -89,7 +91,8 @@ document
       isNaN(donateAmount) ||
       donateAmount <= 0
     ) {
-      return alert("Invalid Donation Amount");
+      alert("Invalid Donation Amount");
+      return (getElement("donate-amount2").value = "");
     } else {
       getElement("my_modal_1").showModal();
     }
@@ -103,13 +106,14 @@ document
   .addEventListener("click", function () {
     const donateAmount = Number(getElement("donate-amount3").value);
     const accountBalance = Number(getElement("initial-balance").innerText);
-    if ( 
+    if (
       donateAmount === "" ||
       donateAmount > accountBalance ||
       isNaN(donateAmount) ||
       donateAmount <= 0
     ) {
-      return alert("Invalid Donation Amount");
+      alert("Invalid Donation Amount");
+      return (getElement("donate-amount3").value = "");
     } else {
       getElement("my_modal_1").showModal();
     }
